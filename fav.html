@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to cart Carine Resturant</title>
+    <!-- font awesome cdn link  @ https://cdnjs.com/ The iconic SVG, font, and CSS toolkit  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--  css file link  -->
+    <link rel="stylesheet" href="Home_CSS.css">
+    <link rel="stylesheet" href="shopcss.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">CARINE </a> <!-- logo-->
+
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Homepage.html#Categories">Categories</a>
+            <a href="menu.html">Menu</a>
+            <a href="Homepage.html#footer">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <!-- show icon search, login, shopping cart-->
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+            <i class="fas fa-shopping-cart" id="shopping-cart"></i>
+            <i class="fa fa-heart" style="font-size:20px;color:aliceblue" id="heart"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!-- header section ends -->
+
+    <table class="tabs" id="tables">
+        <tr>
+            <th>FoodName</th>
+            <th>price</th>
+            <th> </th>
+        </tr>
+        <tr>
+
+            <td>pizza</td>
+            <td>20$</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+
+            <td>pizza</td>
+            <td>20$</td>
+            <td>Delete</td>
+        </tr>
+
+    </table>
+
+
+    <!-- menu section ends -->
+
+    <!--  js file link  -->
+    <script src="Home_js.js">
+
+    </script>
+
+    <script>
+     var index, table = document.getElementById('tables');
+     for(var i = 0 ; i < table.rows.length; i++){
+         table.rows[i].cells[2].onclick = function() {
+             index = this.parentElement.rowIndex;
+             table.deleteRow(index);
+         };
+
+     }
+    </script>
+    <!--for icon social media-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

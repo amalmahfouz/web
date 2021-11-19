@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoping ..</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="Home_CSS.css">
+    <link rel="stylesheet" href="shopcss.css">
+</head>
+
+<body>
+
+     <!-- header section starts  -->
+     <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">CARINE </a> <!-- logo-->
+
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Homepage.html#Categories">Categories</a>
+            <a href="menu.html">Menu</a>
+            <a href="Homepage.html#footer">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <!-- show icon search, login, shopping cart-->
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+            <i class="fas fa-shopping-cart" id="shopping-cart"></i>
+            <i class="fa fa-heart" style="font-size:20px;color:aliceblue" id="heart"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!-- header section ends -->
+    <table class="tabs" id="tables">
+        <tr >
+            <th class="small"></th>
+            <th>foodName</th>
+            <th>Quantity</th>
+            <th>price</th>
+        </tr>
+        <tr>
+            <td class="small"><i class="bi bi-x-circle-fill"  style="color:red;"></i></td>
+            <td>pizza</td>
+            <td>1</td>
+            <td>100$</td>
+        </tr>
+        <tr>
+            <td class="small"><i class="bi bi-x-circle-fill" style="color:red;"></i></td>
+            <td>salad</td>
+            <td>2</td>
+            <td>150$</td>
+        </tr>
+        <tr>
+            <td class="small"><i class="bi bi-x-circle-fill"  style="color:red;"></i></td>
+            <td>drink</td>
+            <td>1</td>
+            <td>300$</td>
+        </tr>
+        <tr>
+            <td class="small" style="font-size: 2rem;font-weight: bolder;">Total Price</td>
+            <td>-</td>
+            <td>-</td>
+            <td>$550</td>
+        </tr>
+    </table>
+
+    <label for="Address" style="border-radius: 50%;font-size: 1.7rem;margin-left:4%; ">Address_Order</label>
+    <input type="text" name="Address" id="Address" ><br> <br>
+    <label for="phone" style="border-radius: 50%;font-size: 1.7rem;margin-left:4%;">Phone Number</label>
+    <input type="text" name="phone" id="phone"  > &nbsp;&nbsp;&nbsp; <br>
+    <br>
+    <button id="conf" >Confirm Order </button>
+
+
+
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Call us</h3>
+                <h2>+972-591-0203-01</h2>
+                <h2>08 2020 2021</h2>
+
+            </div>
+            <div class="box">
+
+                <h3>Connect with us </h3>
+                <a class="social-icon" href="https://www.facebook.com/">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a class="social-icon" href="https://twitter.com/">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <h1 class="credit"> created by Eng. Amal Enaam Alaa Aseel Ola </h1>
+
+    </section>
+    <!-- footer section end-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="Home_js.js"></script>
+
+    <script>
+        var index, table = document.getElementById('tables');
+        for(var i = 0 ; i < table.rows.length; i++){
+            table.rows[i].cells[0].onclick = function() {
+                index = this.parentElement.rowIndex;
+                table.deleteRow(index);
+            };
+   
+        }
+       </script>
+</body>
+
+</html>
